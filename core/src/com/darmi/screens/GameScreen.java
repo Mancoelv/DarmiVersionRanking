@@ -184,10 +184,12 @@ public class GameScreen extends BaseScreen {
         //Guardamos la hora actual
         lastTime = System.currentTimeMillis();
         time=this.delta/1000;
+        //Comprobamos si se ha producido una colision, si ha habido una colision, abrimos la pantalla del game over
         if(choque){
             choque = false;
             game.setScreen(game.gameOverScreen);
         }
+        //Pasamos los tiempos a minutos y segundos para poder pintarlos en la pantalla de juego, además también utilizaremos estos datos para utilizarlos despues en el ranking
         tiempo.setText(game.gameOverScreen.escribirTiempo(time));
         stage2.addActor(tiempo);
 
