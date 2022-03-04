@@ -114,6 +114,7 @@ public class RankingScreen extends BaseScreen{
         } catch (IOException e) {
             e.printStackTrace();
         }
+
         ordenarArrays();
         minutos.removeAll(minutos);
         segundos.removeAll(segundos);
